@@ -5,6 +5,8 @@ type AddTwoNumbersArgs = {
   second: number;
 };
 
+
+
 export const addTwoNumbers = (params: AddTwoNumbersArgs) => {
   return params.first + params.second;
 };
@@ -24,3 +26,4 @@ it("Should add the two numbers together", () => {
     }),
   ).toEqual(30);
 });
+

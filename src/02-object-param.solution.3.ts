@@ -1,9 +1,11 @@
 import { expect, it } from "vitest";
+import { K } from "vitest/dist/global-60f880c6";
 
 interface AddTwoNumbersArgs {
   first: number;
   second: number;
 }
+
 
 export const addTwoNumbers = (params: AddTwoNumbersArgs) => {
   return params.first + params.second;
@@ -24,3 +26,27 @@ it("Should add the two numbers together", () => {
     }),
   ).toEqual(30);
 });
+
+/* 
+Differentiation interface & type
+
+interface Base {
+  id: string;
+}
+
+interface AddTwoNumbersArgs extends Base {
+  first: number;
+  second: number;
+}
+*/
+
+// Deconstructed params
+export const addTwoNumbers = ({
+  first, // Deconstructed params
+  second, // Deconstructed params
+}:{
+  first: number; // type decoration
+  second: number; // type decoration
+}) => {
+  return params.first + params.second;
+}

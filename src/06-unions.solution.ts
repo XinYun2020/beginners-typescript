@@ -18,3 +18,4 @@ export const defaultUser: User = {
   // @ts-expect-error
   role: "I_SHOULD_NOT_BE_ALLOWED",
 };
+
