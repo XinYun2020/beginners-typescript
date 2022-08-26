@@ -1,6 +1,13 @@
 import { expect, it } from "vitest";
 
-export const addTwoNumbers = (params) => {
+// { first, second } // object types?
+// type now represents an object which we now must pass into the function arg
+type Params = {
+  first: number;
+  second: number;
+}
+
+export const addTwoNumbers = (params: Params) => {
   return params.first + params.second;
 };
 
@@ -19,3 +26,6 @@ it("Should add the two numbers together", () => {
     }),
   ).toEqual(30);
 });
+
+
+// solution 3 ways to type this params
